@@ -1,0 +1,20 @@
+User Id: 0
+User Email: 
+Android Version:19
+Manufacturer: samsung
+Device: lt023g
+Brand: samsung
+java.lang.NullPointerException
+	at in.vegvendors.app.ZLogin$7.onPageFinished(ZLogin.java:629)
+	at com.android.webview.chromium.WebViewContentsClientAdapter.onPageFinished(WebViewContentsClientAdapter.java:449)
+	at com.android.org.chromium.android_webview.AwContentsClient$AwWebContentsObserver$1.run(AwContentsClient.java:73)
+	at android.os.Handler.handleCallback(Handler.java:733)
+	at android.os.Handler.dispatchMessage(Handler.java:95)
+	at android.os.Looper.loop(Looper.java:146)
+	at android.app.ActivityThread.main(ActivityThread.java:5598)
+	at java.lang.reflect.Method.invokeNative(Native Method)
+	at java.lang.reflect.Method.invoke(Method.java:515)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1283)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1099)
+	at dalvik.system.NativeStart.main(Native Method)
+****

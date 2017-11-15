@@ -1,0 +1,628 @@
+Mobile View*/
+
+/*Login Page*/
+
+.loginTopper{
+	text-align: center;
+}
+
+.loginTopper ul{
+	text-align: center;
+}
+
+.loginTopper ul li{
+	margin-left: 10px;
+	padding: 5px 0px 5px 5px;
+}
+
+.loginTopper ul li:first-child{
+	margin-left: 0px;
+}
+
+#loginVector{
+	width: 100%;
+	float: none;
+}
+
+#loginWrapper{
+	width: 100%;
+	float: none;
+}
+
+.vegVectorHolder{
+	display: none;
+}
+
+.fullLogoHolder{
+	width: 100%;
+}
+
+.fullLogoHolder img{
+	width: inherit;
+}
+
+.sendingRight1, .sendingRight2{
+	margin-left: 0px;
+}
+
+.rowApp{
+	text-align: center;
+}
+
+.bottomAppRight{
+	float: none;
+	text-align: center;
+}
+
+/*ALL PAGES HEADER MOBILE VIEW*/
+
+.main-logo-holder{
+
+	float: none;
+	text-align: center;
+	padding-right: 0px;
+}
+
+.address-box{
+	float: none;
+	text-align: center;
+	padding: 0px;
+	margin-bottom: 10px;
+}
+
+.taskbar-phoneNo{
+	display: none;
+}
+
+.box-category-heading{
+	width: 100%;
+	text-align: center;
+}
+
+.category-box{
+	width: 100%;
+	background-color: #4caf50;
+	color: #fff;
+	z-index: 1000;
+	top: 70px;
+}
+
+.catMenu > li{
+	background: none;
+	padding: 10px 0px;
+	text-align: center;
+}
+
+.my-account-tab, .cart-tab, .search-tab{
+	font-size: 12px;
+	/*float: none;*/
+	padding-left: 5px;    /*jolly ki karistani*/
+	padding-right: 5px;   /*jolly ki karistani*/
+}
+
+.my-account-tab{
+	margin-right: 5px;
+	margin-left: 12px;
+}
+
+.cart-tab{
+	margin-left: 12px;
+}
+
+/*Search Mobile View*/
+
+
+
+
+#searchBox{
+	top: 140px;
+	background: #4caf50;
+	color: #fff;
+}
+
+.searchBar{
+	border-bottom: 1px #fff solid;
+	color: #212121;
+	font-size: 24px;
+}
+
+.searchBar::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #424242;
+}
+.searchBar::-moz-placeholder { /* Firefox 19+ */
+  color: #424242;
+}
+.searchBar:-ms-input-placeholder { /* IE 10+ */
+  color: #424242;
+}
+.searchBar:-moz-placeholder { /* Firefox 18- */
+  color: #424242;
+}
+
+.searchButton{
+	color: #fff;
+}
+
+.searchButton:hover{
+	color: #212121;
+}
+
+
+
+
+
+
+
+
+
+
+/*Side Tunnel Mobile View*/
+
+.tunnel{
+	width: 100%;
+}
+
+.tunnel-row-1, .tunnel-row-2{
+	padding: 20px;
+}
+
+
+/*Home Page Display*/
+
+.display{
+	display: none;
+}
+
+.row{
+	margin-top: 20px;
+	padding: 0px 10px;
+}
+
+.priceCompareDiv{
+	width: 100%;
+	float: none;
+}
+
+.vegyRow{
+	float: none;
+	margin-top: 20px;
+}
+
+.itemTab{
+	float: none;
+}
+
+.vegTab{
+	width: 300px;
+	min-height: 0px;
+	margin: 20px auto;
+	padding: 10px 18px;
+}
+
+.vendorTab{
+	width: 250px;
+	margin: 20px auto;
+}
+
+.vendorTab:first-child{
+	margin-left: auto !important;
+}
+
+/*Footer Mobile View*/
+
+.aboutDiv{
+	padding: 20px 40px;
+}
+
+.col-4{
+	width: 100%;
+	float: none;
+}
+
+.footer{
+	margin-top: 20px !important;
+	padding: 20px;
+}
+
+.footerCol{
+	margin-top: 20px;
+	text-align: center;
+	border-left: none;
+	padding-bottom: 20px;
+	border-bottom: 1px #757575 solid;
+}
+
+.footerCol:first-child{
+	border-bottom: 1px #757575 solid;
+}
+
+.footerSubRow{
+	margin-top: 20px;
+	padding: 0px;
+	text-align: center;
+	border: none;
+}
+
+.footerSocial{
+	float: none;
+}
+
+.appHolder{
+	float: none;
+	margin-top: 20px;
+}
+
+/*DASHBOARD*/
+
+.dashMenu{
+	width: 20%;
+	padding: 20px 0px;
+}
+
+.dashCase{
+	width: 80%;
+}
+
+.dashTop{
+
+}
+
+.dashName{
+	display: none;
+}
+
+.menuBigPic{
+	display: none;
+}
+
+.dashMenuList li{
+	position: relative;
+	padding: 20px 25px;
+}
+
+.dashMenuList li .mls{
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 60px;
+	background: #fafafa;
+	padding: 20px 15px;
+}
+
+.dashMenuList li:hover .mls{
+	display: block;
+}
+
+.dashView{
+	max-height: 750px;
+}
+
+.statBox{
+	float: none;
+	width: 100%;
+	font-size: 16px;
+}
+
+.statValue{
+	font-size: 50px;
+}
+
+.notificationPreview{
+	float: none;
+	width: 100%;
+}
+
+.dailyBuyPreview{
+	display: none;
+}
+
+.imageChangeBox{
+	padding: 15px 5px;
+}
+
+.photoPreviewWrapper{
+	float: none;
+	margin: 0 auto;
+}
+
+.changePhotoButtons{
+	float: none;
+}
+
+.btn-upload{
+	padding: 10px 30px;
+	text-align: center;
+}
+
+.removePhoto{
+	padding: 10px 30px;
+	min-width: 190px;
+
+}
+
+.profileEditBox{
+	padding: 15px 20px;
+}
+
+.no-clear{
+	width: 100%;
+	float: none;
+	margin-left: 10px;
+	margin-right: 0px;
+}
+
+.no-clear input[type="submit"]{
+	margin-top: 10px;
+}
+
+
+
+/*HUTIYE LOG AND ITEM COMING*/
+
+
+
+
+/*EXTRA PAGES CSS*/
+
+
+.top-logo-holder{
+
+width: 100%;
+	margin: 20px auto;
+	text-align : left;
+	padding-right: 0px;
+
+}
+
+.top-logo-holder img{
+	width: 300px;
+}
+
+.extraPage{
+	width: 100%;
+	background: #fff;
+	padding: 10px 20px;
+	margin-top: 30px;
+	border: 1px #bdbdbd solid;
+}
+
+.extraPage h1{
+	font-family: robotoLight;
+	font-weight: 100;
+	font-size: 20px;
+	color: #616161;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+
+.paraBox{
+	padding: 5px 10px;
+	border: 1px #e0e0e0 solid;
+	font-family: robotoLight;
+	font-size: 15px;
+	margin-bottom: 25px;
+}
+
+.paraBox h2{
+	text-transform: uppercase;
+	padding: 0 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px #e0e0e0 solid;
+	margin-bottom: 10px;
+}
+
+.paraBox p{
+	padding: 0 10px;
+}
+
+.background-about{
+	width: 100%;
+	padding: 42px 5px;
+	margin-top: 30px;
+	background: url("/theme/images/pictures/dark-veg-back.jpg") no-repeat;
+	background-size: cover;
+	border: 1px #bdbdbd solid;
+}
+
+
+.background-hiring{
+	width: 100%;
+	padding: 80px 20px;
+	margin-top: 30px;
+	background: url("/theme/images/pictures/hiring_low.jpg") no-repeat;
+	background-size: cover;
+	border: 1px #bdbdbd solid;
+}
+
+.background-404{
+width: 60%;
+padding: 75px 20px;
+margin-top: -65px;
+background: url("/theme/images/pictures/404.jpg") no-repeat;
+background-size: cover;
+
+}
+
+.background-commingsoon{
+width: 90%;
+padding: 50px 20px;
+margin-top: -15px;
+background: url("/theme/images/pictures/runveggies.jpg") no-repeat;
+background-size: cover;
+
+}
+.background-androidsoon{
+width: 85%;
+padding: 90px 15px;
+margin-top: -15px;
+background: url("/theme/images/pictures/android.jpg") no-repeat;
+background-size: cover;
+
+}
+
+.background-applesoon{
+width: 20%;
+padding: 100px 80px;
+margin-top: -15px;
+background: url("/theme/images/pictures/apple.png") no-repeat;
+background-size: cover;
+
+}
+.background-windowssoon{
+width: 85%;
+padding: 80px 15px;
+margin-top: -15px;
+background: url("/theme/images/pictures/windows.png") no-repeat;
+background-size: cover;
+
+}
+
+
+.teamPage{
+	width: 100%;
+	background: #fff;
+	padding: 8px 16px;
+	margin-top: 30px;
+	border: 1px #bdbdbd solid;
+}
+
+.teamPage h2{
+	font-family: robotoLight;
+	font-weight: 100;
+	font-size: 20px;
+	color: #616161;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+
+.members{
+
+	list-style: none;
+
+}
+
+.members li{
+	float: left;
+	width: 45%;
+	padding: 10px 10px;
+
+	margin: 5px 5px;
+	border: 1px #e0e0e0 solid;
+}
+
+.member-pic-holder{
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	border: 2px #616161 solid;
+	border-radius: 100px;
+	overflow: hidden;
+}
+
+.member-pic-holder img{
+	text-align: center;
+	width: 100px;
+}
+
+.members p{
+	font-family: robotoThin;
+	color: #111;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.members p span{
+	font-family: latoBold;
+	font-size: 12px;
+	color: #919191;
+}
+
+.search-div{
+	float: right;
+	padding: 11px 5px 10px 30px;
+}
+
+.search-in-head{
+	font-family: robotoLight;
+	padding-left: 50px;
+	font-size: 20px;
+	width: 375px;     /*jolly ki karistani*/
+	background: #4caf50;
+	color: #fff;
+	border: 1px #888 solid;
+}
+
+
+ /*jolly ki karistani*/
+.float-checkout-button{
+	z-index: 1000;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	padding: 8px 11px;
+	border-radius: 50px;
+	background: #111;
+}
+ /*jolly ki karistani*/
+.responsive-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 60px; overflow: hidden;
+}
+ /*jolly ki karistani*/
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+ /*jolly ki karistani*/
+ .vendorProfileInfo {
+
+	width: 100%;
+}
+ /*jolly ki karistani*/
+.reviewVendor {
+    width: 100%;
+}
+
+.addToCartButton{
+	padding: 5px 25px;
+}
+
+.homeBigDisplay{
+	height: 415px;
+	background-position: right 90px;
+	background-size: 100% 100%;
+}
+
+.vegetableImageDiv{
+	margin-top: 0px;
+}
+
+.vegetableImageDiv{
+	width: auto;
+	float: left;
+	margin-top: 0px;
+}
+
+.vegetableImageDiv img{
+	height: 54px;
+}
+
+.addToCart{
+	clear: both;
+}
+
+.offerBoxDiv{
+	margin-left: 60px;
+}
+
+.logo-responsive{
+	
+}

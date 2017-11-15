@@ -1,0 +1,26 @@
+User Id: 204
+User Email: ras@yahoo.com
+Android Version:19
+Manufacturer: samsung
+Device: lt023g
+Brand: samsung
+java.lang.RuntimeException: Unable to start activity ComponentInfo{in.vegvendors.app/in.vegvendors.app.CartActivity}: java.lang.NullPointerException
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2400)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2458)
+	at android.app.ActivityThread.access$900(ActivityThread.java:172)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1305)
+	at android.os.Handler.dispatchMessage(Handler.java:102)
+	at android.os.Looper.loop(Looper.java:146)
+	at android.app.ActivityThread.main(ActivityThread.java:5598)
+	at java.lang.reflect.Method.invokeNative(Native Method)
+	at java.lang.reflect.Method.invoke(Method.java:515)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1283)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1099)
+	at dalvik.system.NativeStart.main(Native Method)
+Caused by: java.lang.NullPointerException
+	at in.vegvendors.app.CartActivity.onCreate(CartActivity.java:92)
+	at android.app.Activity.performCreate(Activity.java:5459)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1093)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2364)
+	... 11 more
+****

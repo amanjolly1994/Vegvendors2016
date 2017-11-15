@@ -1,0 +1,13 @@
+.vendor-details{
+    padding: 20px;
+    font-size: 20px;
+    font-style: oblique;
+    font-family: cursive;
+}
+
+.vendor-details-value{
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: underline;
+    font-family: monospace;
+}

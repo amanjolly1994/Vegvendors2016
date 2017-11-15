@@ -1,0 +1,44 @@
+.category-box{
+    position: absolute;
+    top: 114px;
+    display: none;
+    background: #f2f9fd;
+    left: 105px;
+}
+.leader{
+    font-size: 17px;
+    font-family: fantasy;
+    font-weight: bold;
+
+}
+
+.arrow{
+    float: right;
+    right:25px;
+    padding: 4px 5px ;
+}
+
+.category-item{
+    height: fixed;
+}
+
+.middlised{
+    position: relative;
+    top:5px;
+}
+
+
+
+
+@media only screen and (max-width: 992px) {
+    .category-box{
+        top: 90px;
+        left: 0px;
+    }
+}
+
+@media only screen and (max-width: 502px) {
+    .arrow {
+        display: none;
+    }
+}

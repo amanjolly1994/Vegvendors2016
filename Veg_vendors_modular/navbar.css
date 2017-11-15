@@ -1,0 +1,76 @@
+.left{
+    float:left;
+}
+
+.logo{
+    height:45px;
+}
+
+.right{
+    float: right;
+}
+
+.deliveryat{
+    display: inline;
+    border-bottom: 1px solid grey;
+}
+
+.pointed{
+    cursor: pointer;
+}
+
+.nav1{
+    background: #e6edf1;
+}
+
+.nav2{
+    background: #fff;
+
+}
+
+.centralised{
+    padding:5px;
+}
+
+.quick-actions{
+    background: lightgrey;
+    height: 35px;
+    vertical-align: middle;
+    display: inline;
+    padding: 10px;
+}
+
+.search-clicked{
+    text-align: center;
+    position: relative;
+    font-style: italic;
+    font-size: 20px;
+    width: 100%;
+}
+
+
+.z-index{
+    width: inherit;
+    z-index: 100;
+    background: lightgreen;
+}
+.inline-x{
+    position: absolute;
+    top: 35px;
+}
+
+.inline{
+    display: inline;
+}
+
+
+
+.icon-search-result{
+    height: 25px;
+}
+
+#search-item{
+    position: absolute;
+    z-index: 1;
+    background:
+}

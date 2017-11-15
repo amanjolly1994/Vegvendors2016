@@ -1,0 +1,47 @@
+.allOrders{
+  height: 435px;
+  overflow-y: auto;
+}
+
+.orderBox{
+  padding: 15px 10px;
+  border: 1px #fff solid;
+  color: #fff;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.orderBox-left, .orderBox-centre, .orderBox-right{
+  float: left;
+  width: 33.3%;
+  /*border: 1px #000 solid;*/
+}
+
+.orderBox-left{
+  text-align: left;
+}
+
+.orderBox-centre{
+  text-align: center;
+}
+
+.orderBox-right{
+  text-align: right;
+}
+
+.asphaltBack{
+  background: #34495e;
+}
+
+.emeraldBack{
+  background: #27ae60;
+}
+
+.alizarinBack{
+  background: #e74c3c;
+}
+
+.sabzi-img{
+  text-align: center;
+  float: left;
+}

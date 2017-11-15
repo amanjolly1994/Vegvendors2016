@@ -1,0 +1,493 @@
+monitor will print the received events for:
+UDEV - the event which udev sends out after rule processing
+KERNEL - the kernel uevent
+
+KERNEL[4.918945] add      /devices/virtual/mem/full (mem)
+ACTION=add
+DEVMODE=0666
+DEVNAME=full
+DEVPATH=/devices/virtual/mem/full
+MAJOR=1
+MINOR=7
+SEQNUM=31
+SUBSYSTEM=mem
+UDEV_LOG=3
+
+KERNEL[4.918975] add      /devices/virtual/mem/null (mem)
+ACTION=add
+DEVMODE=0666
+DEVNAME=null
+DEVPATH=/devices/virtual/mem/null
+MAJOR=1
+MINOR=3
+SEQNUM=32
+SUBSYSTEM=mem
+UDEV_LOG=3
+
+KERNEL[4.918998] add      /devices/virtual/mem/random (mem)
+ACTION=add
+DEVMODE=0666
+DEVNAME=random
+DEVPATH=/devices/virtual/mem/random
+MAJOR=1
+MINOR=8
+SEQNUM=33
+SUBSYSTEM=mem
+UDEV_LOG=3
+
+KERNEL[4.919018] add      /devices/virtual/mem/urandom (mem)
+ACTION=add
+DEVMODE=0666
+DEVNAME=urandom
+DEVPATH=/devices/virtual/mem/urandom
+MAJOR=1
+MINOR=9
+SEQNUM=34
+SUBSYSTEM=mem
+UDEV_LOG=3
+
+KERNEL[4.919038] add      /devices/virtual/mem/zero (mem)
+ACTION=add
+DEVMODE=0666
+DEVNAME=zero
+DEVPATH=/devices/virtual/mem/zero
+MAJOR=1
+MINOR=5
+SEQNUM=35
+SUBSYSTEM=mem
+UDEV_LOG=3
+
+KERNEL[4.919063] add      /devices/virtual/net/lo (net)
+ACTION=add
+DEVPATH=/devices/virtual/net/lo
+IFINDEX=1
+INTERFACE=lo
+SEQNUM=36
+SUBSYSTEM=net
+UDEV_LOG=3
+
+KERNEL[4.919080] add      /devices/virtual/net/venet0 (net)
+ACTION=add
+DEVPATH=/devices/virtual/net/venet0
+IFINDEX=2
+INTERFACE=venet0
+SEQNUM=37
+SUBSYSTEM=net
+UDEV_LOG=3
+
+KERNEL[4.919097] add      /devices/virtual/tty/console (tty)
+ACTION=add
+DEVNAME=console
+DEVPATH=/devices/virtual/tty/console
+MAJOR=5
+MINOR=1
+SEQNUM=38
+SUBSYSTEM=tty
+UDEV_LOG=3
+
+KERNEL[4.919114] add      /devices/virtual/tty/ptmx (tty)
+ACTION=add
+DEVNAME=ptmx
+DEVPATH=/devices/virtual/tty/ptmx
+MAJOR=5
+MINOR=2
+SEQNUM=39
+SUBSYSTEM=tty
+UDEV_LOG=3
+
+KERNEL[4.919131] add      /devices/virtual/tty/tty (tty)
+ACTION=add
+DEVNAME=tty
+DEVPATH=/devices/virtual/tty/tty
+MAJOR=5
+MINOR=0
+SEQNUM=40
+SUBSYSTEM=tty
+UDEV_LOG=3
+
+KERNEL[4.919148] add      /devices/virtual/tty/tty0 (tty)
+ACTION=add
+DEVNAME=tty0
+DEVPATH=/devices/virtual/tty/tty0
+MAJOR=4
+MINOR=0
+SEQNUM=41
+SUBSYSTEM=tty
+UDEV_LOG=3
+
+KERNEL[4.919163] add      /devices/virtual/tty/tty1 (tty)
+ACTION=add
+DEVNAME=tty1
+DEVPATH=/devices/virtual/tty/tty1
+MAJOR=4
+MINOR=1
+SEQNUM=42
+SUBSYSTEM=tty
+UDEV_LOG=3
+
+KERNEL[4.919180] add      /devices/virtual/tty/tty10 (tty)
+ACTION=add
+DEVNAME=tty10
+DEVPATH=/devices/virtual/tty/tty10
+MAJOR=4
+MINOR=10
+SEQNUM=43
+SUBSYSTEM=tty
+UDEV_LOG=3
+
+KERNEL[4.919206] add      /devices/virtual/tty/tty11 (tty)
+ACTION=add
+DEVNAME=tty11
+DEVPATH=/devices/virtual/tty/tty11
+MAJOR=4
+MINOR=11
+SEQNUM=44
+SUBSYSTEM=tty
+UDEV_LOG=3
+
+KERNEL[4.919222] add      /devices/virtual/tty/tty12 (tty)
+ACTION=add
+DEVNAME=tty12
+DEVPATH=/devices/virtual/tty/tty12
+MAJOR=4
+MINOR=12
+SEQNUM=45
+SUBSYSTEM=tty
+UDEV_LOG=3
+
+KERNEL[4.919239] add      /devices/virtual/tty/tty2 (tty)
+ACTION=add
+DEVNAME=tty2
+DEVPATH=/devices/virtual/tty/tty2
+MAJOR=4
+MINOR=2
+SEQNUM=46
+SUBSYSTEM=tty
+UDEV_LOG=3
+
+KERNEL[4.919255] add      /devices/virtual/tty/tty3 (tty)
+ACTION=add
+DEVNAME=tty3
+DEVPATH=/devices/virtual/tty/tty3
+MAJOR=4
+MINOR=3
+SEQNUM=47
+SUBSYSTEM=tty
+UDEV_LOG=3
+
+KERNEL[4.919281] add      /devices/virtual/tty/tty4 (tty)
+ACTION=add
+DEVNAME=tty4
+DEVPATH=/devices/virtual/tty/tty4
+MAJOR=4
+MINOR=4
+SEQNUM=48
+SUBSYSTEM=tty
+UDEV_LOG=3
+
+KERNEL[4.919298] add      /devices/virtual/tty/tty5 (tty)
+ACTION=add
+DEVNAME=tty5
+DEVPATH=/devices/virtual/tty/tty5
+MAJOR=4
+MINOR=5
+SEQNUM=49
+SUBSYSTEM=tty
+UDEV_LOG=3
+
+KERNEL[4.919314] add      /devices/virtual/tty/tty6 (tty)
+ACTION=add
+DEVNAME=tty6
+DEVPATH=/devices/virtual/tty/tty6
+MAJOR=4
+MINOR=6
+SEQNUM=50
+SUBSYSTEM=tty
+UDEV_LOG=3
+
+KERNEL[4.919329] add      /devices/virtual/tty/tty7 (tty)
+ACTION=add
+DEVNAME=tty7
+DEVPATH=/devices/virtual/tty/tty7
+MAJOR=4
+MINOR=7
+SEQNUM=51
+SUBSYSTEM=tty
+UDEV_LOG=3
+
+KERNEL[4.919345] add      /devices/virtual/tty/tty8 (tty)
+ACTION=add
+DEVNAME=tty8
+DEVPATH=/devices/virtual/tty/tty8
+MAJOR=4
+MINOR=8
+SEQNUM=52
+SUBSYSTEM=tty
+UDEV_LOG=3
+
+KERNEL[4.919361] add      /devices/virtual/tty/tty9 (tty)
+ACTION=add
+DEVNAME=tty9
+DEVPATH=/devices/virtual/tty/tty9
+MAJOR=4
+MINOR=9
+SEQNUM=53
+SUBSYSTEM=tty
+UDEV_LOG=3
+
+UDEV  [5.150070] add      /devices/virtual/mem/zero (mem)
+ACTION=add
+DEVMODE=0666
+DEVNAME=/dev/zero
+DEVPATH=/devices/virtual/mem/zero
+MAJOR=1
+MINOR=5
+SEQNUM=35
+SUBSYSTEM=mem
+UDEV_LOG=3
+USEC_INITIALIZED=5094394
+
+UDEV  [5.152077] add      /devices/virtual/net/venet0 (net)
+ACTION=add
+DEVPATH=/devices/virtual/net/venet0
+IFINDEX=2
+INTERFACE=venet0
+SEQNUM=37
+SUBSYSTEM=net
+UDEV_LOG=3
+USEC_INITIALIZED=5095010
+
+UDEV  [5.154981] add      /devices/virtual/tty/console (tty)
+ACTION=add
+DEVNAME=/dev/console
+DEVPATH=/devices/virtual/tty/console
+MAJOR=5
+MINOR=1
+SEQNUM=38
+SUBSYSTEM=tty
+UDEV_LOG=3
+USEC_INITIALIZED=5100387
+
+UDEV  [5.155967] add      /devices/virtual/tty/ptmx (tty)
+ACTION=add
+DEVNAME=/dev/ptmx
+DEVPATH=/devices/virtual/tty/ptmx
+MAJOR=5
+MINOR=2
+SEQNUM=39
+SUBSYSTEM=tty
+UDEV_LOG=3
+USEC_INITIALIZED=5100690
+
+UDEV  [5.156999] add      /devices/virtual/tty/tty0 (tty)
+ACTION=add
+DEVNAME=/dev/tty0
+DEVPATH=/devices/virtual/tty/tty0
+MAJOR=4
+MINOR=0
+SEQNUM=41
+SUBSYSTEM=tty
+UDEV_LOG=3
+USEC_INITIALIZED=5102432
+
+UDEV  [5.159005] add      /devices/virtual/tty/tty2 (tty)
+ACTION=add
+DEVNAME=/dev/tty2
+DEVPATH=/devices/virtual/tty/tty2
+MAJOR=4
+MINOR=2
+SEQNUM=46
+SUBSYSTEM=tty
+UDEV_LOG=3
+USEC_INITIALIZED=5105675
+
+UDEV  [5.160127] add      /devices/virtual/tty/tty3 (tty)
+ACTION=add
+DEVNAME=/dev/tty3
+DEVPATH=/devices/virtual/tty/tty3
+MAJOR=4
+MINOR=3
+SEQNUM=47
+SUBSYSTEM=tty
+UDEV_LOG=3
+USEC_INITIALIZED=5105986
+
+UDEV  [5.161226] add      /devices/virtual/tty/tty6 (tty)
+ACTION=add
+DEVNAME=/dev/tty6
+DEVPATH=/devices/virtual/tty/tty6
+MAJOR=4
+MINOR=6
+SEQNUM=50
+SUBSYSTEM=tty
+UDEV_LOG=3
+USEC_INITIALIZED=5107937
+
+UDEV  [5.163055] add      /devices/virtual/tty/tty7 (tty)
+ACTION=add
+DEVNAME=/dev/tty7
+DEVPATH=/devices/virtual/tty/tty7
+MAJOR=4
+MINOR=7
+SEQNUM=51
+SUBSYSTEM=tty
+UDEV_LOG=3
+USEC_INITIALIZED=5112630
+
+UDEV  [5.166112] add      /devices/virtual/tty/tty9 (tty)
+ACTION=add
+DEVNAME=/dev/tty9
+DEVPATH=/devices/virtual/tty/tty9
+MAJOR=4
+MINOR=9
+SEQNUM=53
+SUBSYSTEM=tty
+UDEV_LOG=3
+USEC_INITIALIZED=5114420
+
+UDEV  [5.167113] add      /devices/virtual/tty/tty10 (tty)
+ACTION=add
+DEVNAME=/dev/tty10
+DEVPATH=/devices/virtual/tty/tty10
+MAJOR=4
+MINOR=10
+SEQNUM=43
+SUBSYSTEM=tty
+UDEV_LOG=3
+USEC_INITIALIZED=5103625
+
+UDEV  [5.168054] add      /devices/virtual/mem/urandom (mem)
+ACTION=add
+DEVMODE=0666
+DEVNAME=/dev/urandom
+DEVPATH=/devices/virtual/mem/urandom
+MAJOR=1
+MINOR=9
+SEQNUM=34
+SUBSYSTEM=mem
+UDEV_LOG=3
+USEC_INITIALIZED=5094021
+
+UDEV  [5.169031] add      /devices/virtual/tty/tty (tty)
+ACTION=add
+DEVNAME=/dev/tty
+DEVPATH=/devices/virtual/tty/tty
+MAJOR=5
+MINOR=0
+SEQNUM=40
+SUBSYSTEM=tty
+UDEV_LOG=3
+USEC_INITIALIZED=5101051
+
+UDEV  [5.170041] add      /devices/virtual/tty/tty8 (tty)
+ACTION=add
+DEVNAME=/dev/tty8
+DEVPATH=/devices/virtual/tty/tty8
+MAJOR=4
+MINOR=8
+SEQNUM=52
+SUBSYSTEM=tty
+UDEV_LOG=3
+USEC_INITIALIZED=5114070
+
+UDEV  [5.170980] add      /devices/virtual/tty/tty12 (tty)
+ACTION=add
+DEVNAME=/dev/tty12
+DEVPATH=/devices/virtual/tty/tty12
+MAJOR=4
+MINOR=12
+SEQNUM=45
+SUBSYSTEM=tty
+UDEV_LOG=3
+USEC_INITIALIZED=5105366
+
+UDEV  [5.171955] add      /devices/virtual/tty/tty4 (tty)
+ACTION=add
+DEVNAME=/dev/tty4
+DEVPATH=/devices/virtual/tty/tty4
+MAJOR=4
+MINOR=4
+SEQNUM=48
+SUBSYSTEM=tty
+UDEV_LOG=3
+USEC_INITIALIZED=5107329
+
+UDEV  [5.172832] add      /devices/virtual/tty/tty1 (tty)
+ACTION=add
+DEVNAME=/dev/tty1
+DEVPATH=/devices/virtual/tty/tty1
+MAJOR=4
+MINOR=1
+SEQNUM=42
+SUBSYSTEM=tty
+UDEV_LOG=3
+USEC_INITIALIZED=5102742
+
+UDEV  [5.173523] add      /devices/virtual/mem/random (mem)
+ACTION=add
+DEVMODE=0666
+DEVNAME=/dev/random
+DEVPATH=/devices/virtual/mem/random
+MAJOR=1
+MINOR=8
+SEQNUM=33
+SUBSYSTEM=mem
+UDEV_LOG=3
+USEC_INITIALIZED=5093707
+
+UDEV  [5.177426] add      /devices/virtual/tty/tty11 (tty)
+ACTION=add
+DEVNAME=/dev/tty11
+DEVPATH=/devices/virtual/tty/tty11
+MAJOR=4
+MINOR=11
+SEQNUM=44
+SUBSYSTEM=tty
+UDEV_LOG=3
+USEC_INITIALIZED=5103929
+
+UDEV  [5.177736] add      /devices/virtual/tty/tty5 (tty)
+ACTION=add
+DEVNAME=/dev/tty5
+DEVPATH=/devices/virtual/tty/tty5
+MAJOR=4
+MINOR=5
+SEQNUM=49
+SUBSYSTEM=tty
+UDEV_LOG=3
+USEC_INITIALIZED=5107641
+
+UDEV  [5.178004] add      /devices/virtual/net/lo (net)
+ACTION=add
+DEVPATH=/devices/virtual/net/lo
+IFINDEX=1
+INTERFACE=lo
+SEQNUM=36
+SUBSYSTEM=net
+UDEV_LOG=3
+USEC_INITIALIZED=5094706
+
+UDEV  [5.178879] add      /devices/virtual/mem/null (mem)
+ACTION=add
+DEVMODE=0666
+DEVNAME=/dev/null
+DEVPATH=/devices/virtual/mem/null
+MAJOR=1
+MINOR=3
+SEQNUM=32
+SUBSYSTEM=mem
+UDEV_LOG=3
+USEC_INITIALIZED=5093185
+
+UDEV  [5.189070] add      /devices/virtual/mem/full (mem)
+ACTION=add
+DEVMODE=0666
+DEVNAME=/dev/full
+DEVPATH=/devices/virtual/mem/full
+MAJOR=1
+MINOR=7
+SEQNUM=31
+SUBSYSTEM=mem
+UDEV_LOG=3
+USEC_INITIALIZED=5092773
+

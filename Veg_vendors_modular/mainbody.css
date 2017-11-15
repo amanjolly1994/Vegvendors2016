@@ -1,0 +1,49 @@
+.slide{
+    background-image: url("images/coming-soon-back.jpg") ;
+    border: 1px solid;
+    min-height: 350px;
+    overflow:hidden;
+    background-attachment:local;
+}
+
+.row1{
+    background: #e6edf1;
+}
+
+.row2{
+
+}
+
+.youtubevideo{
+    width = 100%;
+}
+
+.ul{
+    text-decoration: underline;
+}
+
+.description{
+    font-size: 20px;
+    font-family: fantasy;
+}
+
+
+.footer-info{
+    font-size: 15px;
+}
+
+.dummy{
+    display: none;
+}
+
+.wrong{
+    border: 1px solid red;
+}
+
+a{
+    z-index: 100;
+}
+
+body{
+    font-family: monospace;
+}

@@ -1,0 +1,40 @@
+.hoverItems{
+    visibility: hidden;
+    background: #f2f9fd;
+
+
+}
+
+.initially{
+    visibility: hidden;
+}
+
+.realtive{
+    position: relative;
+}
+
+
+@media screen and (min-width : 750px) {
+    .hoverItems{
+        position: absolute;
+        left: 430px;
+        top: 114px;
+    }
+}
+
+
+
+
+
+.show{
+    visibility: visible;
+}
+
+.leader2{
+    font-size: 12px;
+}
+
+.leader2:hover{
+    color: lightgreen;
+    font-size: 13px;
+}

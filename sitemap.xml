@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>http://www.vegvendors.in/login.php</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.vegvendors.in/pcveg?cat=1</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.vegvendors.in/pcveg?cat=2</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.vegvendors.in/pcveg?cat=3</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.vegvendors.in/pcveg?cat=4</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.vegvendors.in/pages/about-us</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.vegvendors.in/pages/our-story</loc>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://www.vegvendors.in/pages/tncs.php</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.vegvendors.in/pages/privacy-policy</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.vegvendors.in/pages/werhiring</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.vegvendors.in/pages/faqs</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.vegvendors.in/pages/acceptance</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.vegvendors.in/pages/tncs</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.vegvendors.in/pages/vegetables</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.vegvendors.in/pages/comingsoon</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.vegvendors.in/pages/contact-us</loc>
+  <changefreq>daily</changefreq>
+</url>
+</urlset>

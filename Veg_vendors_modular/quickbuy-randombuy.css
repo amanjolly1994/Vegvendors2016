@@ -1,0 +1,25 @@
+.bordered{
+    border: 1px solid;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+}
+
+
+.inline{
+    display: block-inline;
+}
+
+.image-height{
+    height:100px;
+}
+
+.bg-item{
+    background: lightgrey;
+}
+
+.padded{
+    padding: 5px;
+}

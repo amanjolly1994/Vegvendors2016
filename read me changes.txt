@@ -1,0 +1,7 @@
+finalorder.php in android folder is not the final script finalorder-copy.php
+ but its not tested
+.htacess file needs to be changed when uploading to server
+ following lines need to be added on server
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]

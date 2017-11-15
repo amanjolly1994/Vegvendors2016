@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="966617801310-2cot46e2pdv28kjsgv2d4rsmpg18791c.apps.googleusercontent.com">
+
+        <!--......................ALL JS FILES----------------------->
+
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="jquery-3.1.1.min.js" charset="utf-8"></script>
+        <script src="js/bootstrap.min.js" charset="utf-8"></script>
+        <script src="addtocart.js" charset="utf-8"></script>
+        <script src="login.js" charset="utf-8"></script>
+        <script src="callAll.js" charset="utf-8"></script>
+        <script src="alldata.js" charset="utf-8"></script>
+        <script src="snackbar.js" charset="utf-8"></script>
+        <script src="subtractfromcart.js" charset="utf-8"></script>
+        <script src="add-to-local-var.js" charset="utf-8"></script>
+        <script src="vegnmList.js" charset="utf-8"></script>
+        <script src="setMainJSON.js" charset="utf-8"></script>
+        <script src="JSONparserForVeggie.js" charset="utf-8"></script>
+        <script src="categoryInjector.js" charset="utf-8"></script>
+        <script src="showOnHover.js" charset="utf-8"></script>
+        <script src="categoryClick.js" charset="utf-8"></script>
+        <script src="hoverItemsInjector.js" charset="utf-8"></script>
+        <script src="show-hide-hover-div.js" charset="utf-8"></script>
+        <script src="stamp.js" charset="utf-8"></script>
+        <script src="addFinally.js" charset="utf-8"></script>
+        <script src="itemInjector.js" charset="utf-8"></script>
+        <script src="loadFromStorage.js" charset="utf-8"></script>
+        <script src="clearCart.js" charset="utf-8"></script>
+        <script src="fillSideDivOnClick.js" charset="utf-8"></script>
+        <script src="accountBasketEventHandlers.js" charset="utf-8"></script>
+        <script src="showSideDiv.js" charset="utf-8"></script>
+        <script src="fillSubLocation.js" charset="utf-8"></script>
+        <script src="selectLocation.js" charset="utf-8"></script>
+        <script src="getLocationJSON.js" charset="utf-8"></script>
+        <script src="locationJSONParser.js" charset="utf-8"></script>
+        <script src="vegnmListParser.js" charset="utf-8"></script>
+        <script src="fillArea.js" charset="utf-8"></script>
+        <script src="mainJSONVendorParser.js" charset="utf-8"></script>
+        <script src="vendorInjector.js" charset="utf-8"></script>
+        <script src="account.js" charset="utf-8"></script>
+        <script src="removeEveryItem.js" charset="utf-8"></script>
+        <script src="searchItem.js" charset="utf-8"></script>
+        <script src="insertSearchDiv.js" charset="utf-8"></script>
+        <script src="loginUser.js" charset="utf-8"></script>
+        <script src="fillAccountDetails.js" charset="utf-8"></script>
+        <script src="registerUser.js" charset="utf-8"></script>
+        <script src="injectModal.js" charset="utf-8"></script>
+        <script src="socialLogin.js" charset="utf-8"></script>
+        <!------------------------------------------------------>
+
+        <!--...................ALL CSS FILES---------------------->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="stamp.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="vendors.css">
+        <link rel="stylesheet" href="mainbody.css">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="quickbuy-randombuy.css">
+        <link rel="stylesheet" href="sidedivs.css">
+        <link rel="stylesheet" href="snackbar.css">
+        <link rel="stylesheet" href="category.css">
+        <link rel="stylesheet" href="hoveritems.css">
+        <link rel="stylesheet" href="/css/bootstrap-social.css">
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <link rel="stylesheet" href="vendor-modal.css">
+        <!------------------------------------------------------>
+
+        <title>Veg Vendors Modular</title>
+    </head>
+    <body onload="initialize()" >
+
+<!--........................................................FACEBOOK SDK..................................-->
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '572841012892700',
+              xfbml      : true,
+              version    : 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+
+           function onSignIn(googleUser) {
+              var profile = googleUser.getBasicProfile();
+              console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+              console.log('Name: ' + profile.getName());
+              console.log('Image URL: ' + profile.getImageUrl());
+              console.log('Email: ' + profile.getEmail());
+            }
+
+            function signOut() {
+               var auth2 = gapi.auth2.getAuthInstance();
+               auth2.signOut().then(function () {
+                 console.log('User signed out.');
+               });
+             }
+
+
+
+   </script>
+        <div class="container">
+
+<!--........................................................FACEBOOK SDK ENDS.................................-->
+
+
+<!--............................................NAVBAR...........................................................-->
+                <nav class="navbar-default">
+                    <div class="container-fluid nav1">
+                                <div class="col-xs-1 left">
+                                    <img src="images/full-logo.png" alt="logo" class="logo image-responsive">
+                                </div>
+                                <div class=" right">
+                                    <span class="navbar-text icon">
+                                        <span class="glyphicon glyphicon-earphone text-muted" ></span>
+                                        +91-9876543210&nbsp;
+                                    </span>
+                                        <span class="navbar-text" id="location-click" class="pointed">
+                                            <span class="text-muted">DELIVERY AT</span>
+                                            <span class="glyphicon glyphicon-map-marker"></span>
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                            <div class="deliveryat pointed" id="deliveryAt">
+
+                                            </div>
+                                        </span>
+                                </div>
+                    </div>
+
+                    <div class="container-fluid nav2">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-1 centralised">
+                                <center id="categoryClick">
+                                    <button type="button" class="btn"  >
+                                        CATEGORY
+                                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                                    </button>
+                                </center>
+                            </div>
+                            <div class="centralised">
+                                <div class="col-xs-12 col-md-4 right btn">
+                                    <div class="search-clicked dummy" id="search-item">
+                                        <input id="search-text" type="text" value placeholder="What are you looking for?" class="form-control">
+                                        <!-- <div class="search-result inline-x"> -->
+                                            <!-- <a href="#"> -->
+                                                <div class="bordered inline-x dummy z-index" id="search-result">
+                                                    <!-- <a href="http://www.google.com" id="link-search-img"> -->
+                                                        <div class="inline left">
+                                                            <img class="icon-search-result img-responsive img-rounded img-thumbnail" src="" alt="Image Vegetable" id="image-search" >
+                                                        </div>
+                                                    <!-- </a> -->
+                                                    <!-- <a href="#" id="link-search-name"> -->
+                                                        <div class="inline lead" id="name-search">
+
+                                                        </div>
+                                                    <!-- </a> -->
+                                                </div>
+                                                <div id="search-items-here">
+
+                                                </div>
+                                            <!-- </a> -->
+                                        <!-- </div> -->
+                                    </div>
+                                    <div id="quick-actions" >
+                                        <span class="glyphicon glyphicon-search pointed quick-actions "  id="search">&nbsp;SEARCH&nbsp;&nbsp;</span>
+                                        <span class="glyphicon glyphicon-object-align-vertical pointed quick-actions" id="basket-icon">&nbsp;BASKET&nbsp;&nbsp;</span>
+                                        <span class="glyphicon glyphicon-user pointed quick-actions" id="account-icon">&nbsp;ACCOUNT&nbsp;</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+<!--..........................................................................................................................-->
+
+
+
+<!--...........................................................static.......................................................-->
+                <br>
+                <div class="container-fluid row1">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-8 slide">
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <img src="images/vendor-tab.jpg" alt="logo" class="image-responsive">
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <img src="images/discount.jpg" alt="logo" class="image-responsive">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+<!--......................................................................................................................-->
+
+                <!-- <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-7">
+                            <iframe  src="https://www.youtube.com/embed/JkK1ZZ9-rhw"  allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div> -->
+                <br >
+                <span id="category-before-here"></span>
+
+<!--............................................category 1............................-->
+
+                <div class="container-fluid dummy" id="category" name="">
+                    <div class="row">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="lead text-muted" id="categoryName">CATEGORY</span>
+                    </div>
+                    <div class="row" id="items-container">
+
+
+                        <!--DUMMY ITEM REMOVED
+
+                        <div class="col-xs-12 col-md-3" name="Onion" value="0.5">
+                                <center class="padded bg-item">
+                                    <div class="row ">
+                                        <span class="btn btn-danger btn-sm">BEST BUY</span>
+                                    </div>
+                                    <br>
+                                    <div class="row imagerow">
+                                        <img src="images/onion.gif" alt="onion" class="img-responsive img-circle image-height">
+                                    </div>
+                                    <div class="row lead">
+                                        ONION (प्याज़)
+                                    </div>
+                                    <div class="row lead">
+                                        ₹22/Kg
+                                    </div>
+                                    <div class="row">
+                                        <span class="btn btn-primary inline subtract">-</span>
+                                        <span class="btn btn-primary inline" value="0.0" >0.00 Kgs in cart</span> <!-value indicates weight->
+                                        <span class="btn btn-primary inline add">+</span>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <span class="btn btn-info add-finally" price="22">ADD TO CART</span>
+                                    </div>
+                                    <hr>
+                                </center>
+                        </div>
+
+                        <div class="col-xs-12 col-md-3 " name="Tomato" value="0.5">
+                                <center class="padded bg-item">
+                                    <div class="row ">
+                                        <span class="btn btn-danger btn-sm">BEST BUY</span>
+                                    </div>
+                                    <br>
+                                    <div class="row imagerow">
+                                        <img src="images/tomato.gif" alt="tomato" class="img-responsive img-circle image-height">
+                                    </div>
+                                    <div class="row lead">
+                                        TOMATO (टमाटर)
+                                    </div>
+                                    <div class="row lead">
+                                        ₹50/Kg
+                                    </div>
+                                    <div class="row">
+                                        <span class="btn btn-primary inline subtract">-</span>
+                                        <span class="btn btn-primary inline" value="0.0" >0.00 Kgs in cart</span>    <!-value indicates weight->
+                                        <span class="btn btn-primary inline add">+</span>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <span class="btn btn-info add-finally" price="50">ADD TO CART</span>
+                                    </div>
+                                    <hr>
+                                </center>
+                        </div>
+
+                    -->
+
+
+
+                    </div>
+                    <br>
+                </div>
+
+<!--.................................................Dummy Item......................................................-->
+                <div class="col-xs-12 col-md-3 dummy item-temp" id="item" name="" value="" price="" totalWeight="" sid = "">
+                        <center class="padded bg-item">
+                            <div class="row " id = "insert-stamp-before-here">
+                                <span class="btn btn-danger btn-sm">BEST BUY</span>
+                            </div>
+                            <br>
+                            <div class="row imagerow">
+                                <img src="" alt="IMAGE" class="img-responsive img-circle image-height">
+                            </div>
+                            <div class="row lead" id="name-item">
+
+                            </div>
+                            <div class="row lead">
+                                <span>₹</span>
+                                <span id="price-item"></span>
+                                <span>/Kg</span>
+                            </div>
+                            <div class="row" id="details">
+                                <span class="btn btn-primary inline subtract" id="subtract-item" >-</span>
+                                <span class="btn btn-primary inline" id="show-value" >0.00 Kgs in cart</span> <!--value indicates weight-->
+                                <span class="btn btn-primary inline add" id="add-item">+</span>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <span class="btn btn-info add-finally" id="add-finally" >ADD TO CART</span>
+                            </div>
+                            <hr>
+                        </center>
+                </div>
+
+<!--.................................................................................................................-->
+
+
+
+
+
+<!--.............................................STAMP...............................................-->
+
+
+                    <div class="stamp dummy" id="stamp">
+
+                    </div>
+
+<!--...................................................................................................-->
+
+
+<!--............................................category 2............................-->
+
+
+<!--...
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="lead text-muted">RANDOM VEGETABLES</span>
+                    </div>
+                    <div class="row">
+                            <div class="col-xs-12 col-md-3">
+                                    <center class="padded bg-item">
+                                        <div class="row ">
+                                            <span class="btn btn-danger btn-sm">BEST BUY</span>
+                                        </div>
+                                        <br>
+                                        <div class="row imagerow">
+                                            <img src="images/peppermint.gif" alt="peppermint" class="img-responsive img-circle image-height">
+                                        </div>
+                                        <div class="row lead">
+                                            PEPPERMINT (पुदीना)
+                                        </div>
+                                        <div class="row lead">
+                                            ₹100/Kg
+                                        </div>
+                                        <div class="row">
+                                            <span class="btn btn-primary inline">-</span>
+                                            <span class="btn btn-primary inline">0.00 Kgs in cart</span>
+                                            <span class="btn btn-primary inline">+</span>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <span class="btn btn-info add-finally">ADD TO CART</span>
+                                        </div>
+                                        <hr>
+                                    </center>
+                            </div>
+
+                            <div class="col-xs-12 col-md-3">
+                                    <center class="padded bg-item">
+                                        <div class="row ">
+                                            <span class="btn btn-danger btn-sm">BEST BUY</span>
+                                        </div>
+                                        <br>
+                                        <div class="row imagerow">
+                                            <img src="images/spinach.gif" alt="spinach" class="img-responsive img-circle image-height">
+                                        </div>
+                                        <div class="row lead">
+                                            SPINACH (पालक)
+                                        </div>
+                                        <div class="row lead">
+                                            ₹30/Kg
+                                        </div>
+                                        <div class="row">
+                                            <span class="btn btn-primary inline">-</span>
+                                            <span class="btn btn-primary inline">0.00 Kgs in cart</span>
+                                            <span class="btn btn-primary inline">+</span>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <span class="btn btn-info add-finally">ADD TO CART</span>
+                                        </div>
+                                        <hr>
+                                    </center>
+                            </div>
+
+                            <div class="col-xs-12 col-md-3">
+                                    <center class="padded bg-item">
+                                        <div class="row ">
+                                            <span class="btn btn-danger btn-sm">BEST BUY</span>
+                                        </div>
+                                        <br>
+                                        <div class="row imagerow">
+                                            <img src="images/lady_finger.gif" alt="lady finger" class="img-responsive img-circle image-height">
+                                        </div>
+                                        <div class="row lead">
+                                            LADYFINGER (भिन्डी/ ओकरा)
+                                        </div>
+                                        <div class="row lead">
+                                            ₹40/Kg
+                                        </div>
+                                        <div class="row">
+                                            <span class="btn btn-primary inline">-</span>
+                                            <span class="btn btn-primary inline">0.00 Kgs in cart</span>
+                                            <span class="btn btn-primary inline">+</span>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <span class="btn btn-info add-finally">ADD TO CART</span>
+                                        </div>
+                                        <hr>
+                                    </center>
+                            </div>
+
+                            <div class="col-xs-12 col-md-3">
+                                    <center class="padded bg-item">
+                                        <div class="row ">
+                                            <span class="btn btn-danger btn-sm">BEST BUY</span>
+                                        </div>
+                                        <br>
+                                        <div class="row imagerow">
+                                            <img src="images/mushrooms.gif" alt="mushroom" class="img-responsive img-circle image-height">
+                                        </div>
+                                        <div class="row lead">
+                                            MUSHROOM (मशरुम)
+                                        </div>
+                                        <div class="row lead">
+                                            ₹250/Kg
+                                        </div>
+                                        <div class="row">
+                                            <span class="btn btn-primary inline">-</span>
+                                            <span class="btn btn-primary inline">0.00 Kgs in cart</span>
+                                            <span class="btn btn-primary inline">+</span>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <span class="btn btn-info add-finally">ADD TO CART</span>
+                                        </div>
+                                        <hr>
+                                    </center>
+                            </div>
+                    </div>
+                    <br>
+                </div>
+
+            -->
+
+
+<!--.........................................Vendors....................................................-->
+                <hr>
+                <div class="container-fluid">
+                    <div class="row">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="lead">VENDORS</span><footer class="ul">Active vegetable vendor near your location</footer>
+                    </div>
+                    <br>
+                    <div class="row " id="vendorList">
+                        <!--...............................vendor list to be added dynamically...................-->
+
+
+                    </div>
+
+                </div>
+                <hr>
+                <div class="container-fluid bg-item">
+                    <center><h2>What is Veg Vendors</h2></center>
+                    <div class="row description">
+                        It is an on-demand delivery service that connects you to the nearest vegetable peddlers .Veg Vendors aim is to amend the traditional way of people buying groceries to make the local shopping experience more convenient and amicable. We are substituting your visits to the nearby vegetable peddlers with a few taps on the mobile/laptop/computer/tab.
+                    </div>
+                </div>
+                <hr>
+
+                <div class="container-fluid">
+                    <div class="row ">
+                        <div class="col-xs-6 col-md-3">
+                            <span class="glyphicon glyphicon-time"></span>
+                            <span class="lead ">ORDER ONLINE</span>
+                            <br>
+                            <span >HOURS: 7AM:10PM</span>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <span class="glyphicon glyphicon-usd"></span>
+                            <span class="lead">COD</span>
+                            <br>
+                            <span>CASH ON DELIVERY ONLY</span>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <span class="glyphicon glyphicon-hourglass"></span>
+                            <span class="lead">FREE SHIPPING</span>
+                            <br>
+                            <span>FOREVER FREE DELIVERY</span>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <span class="glyphicon glyphicon-remove-sign"></span>
+                            <span class="lead">EASY CANCEL</span>
+                            <br>
+                            <span>REJECT ON YOUR DOOR</span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+
+
+<!--...........................................side bar.....................................................-->
+        <div class="side-block right col-xs-12 col-sm-5 col-md-4" id="sideDiv">
+
+
+
+
+
+            <!--.....acoount and area div added dynamically....-->
+
+
+
+                <hr id="insert-account-here">
+
+
+
+    <!--.................................Dynamic Basket (data loaded from localStorage)....................................-->
+            <div class="basket" id="sideDivBasket">
+
+            <!--........................... .....static part....................................-->
+                <div class="block">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                    <span class="text-muted">Your cart</span>
+                    <span class="btn btn-success btn-sm right-margin" id="clear">CLEAR</span>
+                </div>
+                <br>
+            <!--..............................................................................-->
+
+
+
+            <!--................................dynamic part....................................-->
+                <div class="item-main" id="basket">
+                        <!--removed from here loaded dynamically-->
+                </div>
+                <!--..............................................................................-->
+            </div>
+    <!--........................................dynamic basket end..................................................-->
+
+
+            <div class="checkout basket">
+                <div class="final-list">
+                    <span class="no-of-items text-muted">0</span>
+                    <span>Item(s)|</span>
+                    <span class="vendor-no">0</span>
+                    <span>Vendor(s)</span>
+                    <span class="right-margin">Total-₹</span><span class="total-cost"></span>
+                </div>
+                <br>
+                <div class="last basket">
+                    <span class="btn btn-primary btn-sm right-margin">Checkout</span>
+                </div>
+            </div>
+        </div>
+
+
+<!--.............................................................SNACKBARS.....................................-->
+
+        <div id=snackbar>
+        </div>
+
+<!--..............................................................................................................-->
+
+
+
+    <!--.....................................................category dropdown div............................................-->
+
+            <div class="col-xs-12 col-md-3 category-box" id="category-box">
+                <ul class="middlised list-unstyled" id="category-main-list">
+
+                </ul>
+            </div>
+
+
+
+     <!--.....................................................DIV TEMPLATE OF CATEGORY ITEM.....-->
+
+
+
+     <!--..................................................dropdown..................................-->
+                 <div id="item-wrapper" class="dummy category-temp">
+                     <ul class="list-unstyled" id="category-list">
+                         <div class="category-item">
+                             <li class="hover-actions">
+                                 <a href="#"><span class="lead leader text-muted category-name" id="category-name"></span></a>
+                                 <span class="glyphicon glyphicon-chevron-right arrow"></span>
+
+
+                             </li>
+
+                         </div>
+                     </ul>
+                     <br>
+                 </div>
+
+    <!--...........................................................................................-->
+
+    <!--..................................................DIV TEMPLATE OF lIST iTEMS oF CATEGORY On Hover ....-->
+
+            <div id="dummy-hover-item" class="col-xs-12 col-md-4 hoverItems" >
+                <div id="hoverListWrapper">
+                    <ul id="hoverItemsList" class="list-unstyled">
+                        <span class="lead " id="header"></span>
+
+                    </ul>
+                </div>
+            </div>
+
+            <li id="hover-list-item">
+                <a href="#" id="link"><span class="lead leader2 clickable" id="vegname"></span></a>
+            </li>
+
+
+
+
+
+
+
+    <!--..........................................................................................................-->
+
+
+
+
+
+
+<!--.....................................................................................................................-->
+
+
+
+
+
+
+<!--......................................................cart-item........................................................-->
+            <div class="cart-item  dummy" id="cart-item" name="" value="" price="" totalWeight="" sid ="" totalprice="">
+                <table class="table">
+                    <tr>
+                        <td><span class="text-muted" id="name-cart-item"></span></td>
+                        <td><span class="btn btn-info btn-sm lead subtract-cart-item subtractfromcart-cart" id="subtract-cart-item">-</span></td>
+                        <td><span class="btn btn-info btn-sm" id="weight-cart-item"></span></td>
+                        <td><span class="btn btn-info btn-sm lead add-cart-item addtocart-cart" id="add-cart-item">+</span></td>
+                        <td><span class="text-muted">₹</span><span class="text-muted" id="cart-item-price"></span></td>
+                        <td><img src="images/default-pic.png" alt="vendor" class="img-responsive height inline"></td>
+                    </tr>
+                </table>
+            </div>
+<!--.....................................................................................................................-->
+
+
+
+
+<!--......................................................ACCOUNT........................................................-->
+
+            <div class="dummy" id="account">
+                <div class=" block">
+                    <br>
+                    <span>&nbsp;&nbsp;</span>
+                    <span class="glyphicon glyphicon-arrow-left btn btn-default back-button"></span>
+                </div>
+                <br>
+                <div class="account-picture">
+                    <img id="default" src="http://www.vegvendors.in/content/profile_photos/vegvendor_black_dp.png" alt="USER IMAGE" class="img-responsive img-circle image-height"><!--...to be changed...-->
+                </div>
+                <span><p class="lead account-picture"><small>MY ACCOUNT</small></p></span>
+                <div class="login account-picture">
+                    <span class="text-muted clickable block" id="login-button-account">Login to your account</span>
+                </div>
+                <div class="create account-picture">
+                    <span class="text-muted clickable block" id="createNew">Create new account</span>
+                </div>
+            </div>
+
+<!--.....................................................................................................................-->
+
+
+<!--............................................LOCation..........................................-->
+            <div class="dummy" id="location">
+                <div class=" block">
+                    <br>
+                    <span>&nbsp;&nbsp;</span>
+                    <span class="glyphicon glyphicon-arrow-left btn btn-default back-button"></span>
+                </div>
+                <br>
+                <span class="lead text-muted">AREA:</span>
+                <select class="form-control" id="area">
+                    <option value="-1" id="clone-area">Select Your Area</option>
+                </select>
+                <br>
+                <span class="lead text-muted" >SUB AREA:</span>
+                <select class="form-control" name="" id="sub-area">
+                    <option value="-2" id="clone-option">Select Area First</option>
+                </select>
+
+            </div>
+<!--...............................................................................................-->
+
+
+
+<!--...............................................vendor template..................................-->
+
+
+            <div class="col-xs-12 col-md-3 dummy vendor-temp" id="vendor">
+                    <center class="padded bg-item">
+                        <div class="row imagerow">
+                            <img id="vendor-img" src="" alt="vendor" class="img-responsive img-circle image-height">
+                        </div>
+                        <div class="row lead" id="vendor-name">
+                            name
+                        </div>
+                        <div class="text-muted" id="vendor-id">
+                            ID
+                        </div>
+                        <br>
+                        <div class="text-muted ">
+                            DEALS IN:
+                        </div>
+                        <div class="row text-center text-muted" id="vendor-categories">
+
+                        </div>
+                        <br>
+                        <div class="row">
+                            <button class="btn btn-primary inline view-profile" data-toggle="modal" data-target="#vendor-profile">View Vendor Profile</button>
+                        </div>
+                        <br>
+                    </center>
+            </div>
+
+
+<!--...................................................................................................-->
+
+
+<!--.............................................Login ..................................-->
+
+<div class="dummy" id="login">
+
+    <div class=" block">
+        <br>
+        <span>&nbsp;&nbsp;</span>
+        <span class="glyphicon glyphicon-arrow-left btn btn-default back-button"></span>
+    </div>
+    <br>
+    <div class="facebook col-xs-12 col-md-6 " >
+        <a class="btn btn-block btn-social btn-facebook facebook-login">
+           <span class="fa fa-facebook"></span> Sign in with Facebook
+        </a>
+        <!-- <div class="fb-login-button" data-max-rows="2" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
+
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button> -->
+    </div>
+    <div class="googlep col-xs-12 col-md-6">
+        <!-- <a class="btn btn-block btn-social btn-google google-login">
+           <span class="fa fa-google"></span> Sign in with Google
+         </a> -->
+         <div class="g-signin2" data-onsuccess="onSignIn" class="google-login"></div>
+         <a href="#" onclick="signOut();">Sign out</a>
+    </div>
+    <br>
+    <form class="form-horizontal" action="index.html" method="post">
+        <span class="form-group">
+            <input type="email" class="form-control" name="email" value="" placeholder="Email" id="email-login">
+        </span>
+        <span class="form-group">
+            <input type="password" class="form-control" name="" value="" placeholder="Password" id="password-login">
+        </span>
+        <br>
+        <span class="btn btn-success col-xs-3 col-xs-offset-3" id="submitLoginForm">Proceed</span>
+    </form>
+    <br>
+    <br>
+        <span class="center block text-muted">Forgot Password?</span>
+        <span class="center block">Dont have a account?<span class="text-muted" id="signUp">Sign up</span></span>
+
+</div>
+
+
+<!--...................................................................................................-->
+
+
+<!--.......................................login inned account...................................-->
+
+<div class="dummy" id="login-account">
+    <div class=" block">
+        <br>
+        <span>&nbsp;&nbsp;</span>
+        <span class="glyphicon glyphicon-arrow-left btn btn-default back-button"></span>
+    </div>
+    <br>
+    <div class="account-picture">
+        <img id="user-image" src="" alt="USER IMAGE" class="img-responsive img-circle image-height"><!--...to be changed...-->
+    </div>
+    <span><p class="lead account-picture"><small id="name">MY ACCOUNT</small></p></span>
+    <div class="login account-picture">
+        <span class="text-muted clickable block" id="logout-button">Logout</span>
+    </div>
+    <div class="create account-picture">
+        <span class="text-muted clickable block" id="notification-button">Notifications</span>
+    </div>
+    <div class="create account-picture">
+        <span class="text-muted clickable block" id="dashboard-button"><a href="http://www.vegvendors.in/dashboard.php">Dashboard</a></span>
+    </div>
+</div>
+
+
+<!--.............................................................................................................-->
+
+
+<!--......................................REGISTER...............................................................-->
+
+<div class="dummy" id="register">
+
+    <div class=" block">
+        <br>
+        <span>&nbsp;&nbsp;</span>
+        <span class="glyphicon glyphicon-arrow-left btn btn-default back-button"></span>
+    </div>
+    <br>
+    <div class="facebook col-xs-12 col-md-6 " >
+        <a class="btn btn-block btn-social btn-facebook facebook-login">
+           <span class="fa fa-facebook"></span> Sign in with Facebook
+        </a>
+    </div>
+    <div class="googlep col-xs-12 col-md-6">
+        <!-- <a class="btn btn-block btn-social btn-google google-login">
+           <span class="fa fa-google"></span> Sign in with Google
+         </a> -->
+         <div class="g-signin2" data-onsuccess="onSignIn" class="google-login"></div>
+    </div>
+    <br>
+    <form class="form-horizontal" action="index.html" method="post">
+        <span class="form-group">
+            <input type="text" name="" value="" class="form-control" placeholder="Full Name" id="full-name">
+        </span>
+        <span class="form-group">
+            <input type="email" class="form-control" name="email" value="" placeholder="Email" id="email-register">
+        </span>
+        <span class="form-group">
+            <input type="password" class="form-control" name="" value="" placeholder="Password" id="password-register">
+        </span>
+
+        <br>
+        <span class="btn btn-success col-xs-3 col-xs-offset-3" id="submitRegisterForm">Proceed</span>
+    </form>
+    <br>
+    <br>
+        <span class="center block ">Already Have a account? <span class="text-muted clickable" id="login-from-register">Login</span></span>
+
+</div>
+
+<!--.............................................................................................................-->
+
+
+<!--......................................Vendor Modal..........................................................-->
+
+            <div class="modal fade" id="vendor-profile" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <center><h1 class="modal-title" id="vendor-name-modal"></h1><center>
+                  </div>
+
+                  <div class="modal-body">
+                      <div class="row">
+                          <div class="col-xs-12 col-sm-3">
+                              <img src="" class="img-responsive img-rounded" alt="vendor-profile-picture" id="vendor-image-modal">
+                              <center><span class="btn" id="modal-available"></span></center>
+                          </div>
+                          <div class="col-xs-12 col-sm-9">
+                              <div class="vendor-id">
+                                  <span class="vendor-details">VENDOR ID-</span>
+                                  <span class="vendor-details-value" id="vid-modal"></span>
+                              </div>
+                              <div class="area">
+                                  <span class="vendor-details">AREA-</span>
+                                  <span class="vendor-details-value" id="varea-modal"></span>
+                              </div>
+                              <div class="subArea">
+                                <span class="vendor-details">SUB AREA-</span>
+                                <span class="vendor-details-value" id="vsubarea-modal"></span>
+                              </div>
+                              <div class="timing">
+                                  <span class="vendor-details">TIMINGS-</span>
+                                  <span class="vendor-details-value" id="vtimings-modal"></span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+<!--.............................................................................................................-->
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

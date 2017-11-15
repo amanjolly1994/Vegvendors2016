@@ -1,0 +1,35 @@
+User Id: 0
+User Email: 
+Android Version:19
+Manufacturer: samsung
+Device: lt023g
+Brand: samsung
+java.lang.RuntimeException: Unable to start activity ComponentInfo{in.vegvendors.app/in.vegvendors.app.ZLogin}: java.lang.IllegalStateException: ScrollView can host only one direct child
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2400)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2458)
+	at android.app.ActivityThread.access$900(ActivityThread.java:172)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1305)
+	at android.os.Handler.dispatchMessage(Handler.java:102)
+	at android.os.Looper.loop(Looper.java:146)
+	at android.app.ActivityThread.main(ActivityThread.java:5598)
+	at java.lang.reflect.Method.invokeNative(Native Method)
+	at java.lang.reflect.Method.invoke(Method.java:515)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1283)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1099)
+	at dalvik.system.NativeStart.main(Native Method)
+Caused by: java.lang.IllegalStateException: ScrollView can host only one direct child
+	at android.widget.ScrollView.addView(ScrollView.java:406)
+	at android.view.LayoutInflater.rInflate(LayoutInflater.java:770)
+	at android.view.LayoutInflater.parseInclude(LayoutInflater.java:855)
+	at android.view.LayoutInflater.rInflate(LayoutInflater.java:751)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:498)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:398)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:354)
+	at android.support.v7.app.AppCompatDelegateImplV9.setContentView(AppCompatDelegateImplV9.java:284)
+	at android.support.v7.app.AppCompatActivity.setContentView(AppCompatActivity.java:140)
+	at in.vegvendors.app.ZLogin.onCreate(ZLogin.java:137)
+	at android.app.Activity.performCreate(Activity.java:5459)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1093)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2364)
+	... 11 more
+****

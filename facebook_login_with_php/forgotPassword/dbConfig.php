@@ -1,0 +1,38 @@
+<?php
+//db details
+$dbHost = 'localhost';
+$dbUsername = 'root';
+$dbPassword = '';
+$dbName = 'sabziwala';
+
+//Connect and select the database
+$db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+
+if ($db->connect_error) {
+    die("Connection failed: " . $db->connect_error);
+}
+
+
+
+//for mysql pdo connections login and register page
+
+try{
+	
+	$db_con = new PDO("mysql:host={$dbHost};dbname={$dbName}",$dbUsername,$dbPassword);
+	$db_con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $e){
+	echo $e->getMessage();
+}
+
+// Redirect Function for redirecting to another page using header
+
+function redirect($url) {
+    ob_start();
+    header('Location: '.$url);
+    ob_end_flush();
+    die();
+}
+
+
+?>

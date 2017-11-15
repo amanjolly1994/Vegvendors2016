@@ -1,0 +1,11 @@
+SetEnv TZ Asia/Kolkata
+php_value date.timezone "Asia/Kolkata"
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+ErrorDocument 404 /pages/404.php
+ErrorDocument 403 /pages/404.php
+

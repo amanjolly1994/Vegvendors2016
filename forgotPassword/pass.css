@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+/*Global Style and Format*/
+*{
+	box-sizing: border-box;
+	text-decoration: none;
+	margin: 0px;
+	padding: 0px;
+	font-size: 100%;
+}
+
+*:focus {
+    outline: none;
+}
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+a{
+	text-decoration: none !important;
+	color: inherit !important;
+	position: relative !important;
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	position: relative;
+	background: url(forgot-back.jpg) no-repeat center;
+	font-family: robotoLight;
+	font-size: 14px;
+	color: #616161;
+	overflow-x: hidden;
+}
+
+.forgotPage{
+	width: 100%;
+}
+
+.forgotBox{
+  position:absolute;
+  background: #fff;
+  top:50%;
+  left:50%;
+  padding: 50px;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+section{
+	position: relative;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+.key-image-holder{
+  width: 70px;
+  margin: 0 auto;
+}
+
+.key-image-holder img{
+  width: 70px;
+}
+
+.heading-for-page{
+  text-align: center;
+  font-family: roboto;
+  font-size: 40px;
+  margin-top: 20px;
+  color: #111;
+}
+
+.forgot-password{
+  margin-top: 20px;
+}
+
+.forgot-password p{
+  text-transform: uppercase;
+  font-family: robotoLight;
+  font-size: 16px;
+	color: #95a5a6;
+}
+
+.forgot-password input:not([type="submit"]){
+  margin-top: 10px;
+  width: 100%;
+  padding: 6px 15px;
+  font-family: lato;
+  font-size: 24px;
+  color: #111;
+  border: 1px #bdc3c7 solid;
+  border-radius: 5px;
+}
+
+.forgot-password input:not([type="submit"]):focus{
+	border-color: #7f8c8d;
+}
+
+.submit-holder{
+	text-align: right;
+	margin-top: 20px;
+}
+
+.forgot-password input[type="submit"]{
+	background: #ecf0f1;
+	border: none;
+	font-family: robotoLight;
+	font-size: 16px;
+	color: #7f8c8d;
+	cursor: pointer;
+	padding: 8px 10px;
+	border-radius: 3px;
+}
+
+.forgot-password input[type="submit"]:hover{
+	background: #4CAF50;
+	color: #fff;
+}
+
+.goto-login{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.goto-login a{
+  color: #e74c3c !important;
+}
+
+.fail-box{
+  display: none;
+  margin-top: 15px;
+  background: #e57373;
+  padding: 5px 10px;
+  color: #fff;
+  font-family: lato;
+  font-size: 12px;
+  text-align: center;
+}
